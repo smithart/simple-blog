@@ -4,17 +4,11 @@ global $Wcms;
 
 class SimpleBlog {
 	public $slug = 'blog';
-
 	private $Wcms;
-
 	private $db;
-
 	private $dbPath;
-
 	private $dateFormat = 'd F Y';
-
 	private $path = [''];
-
 	private $active = false;
 
 	public function __construct($load) {
@@ -44,7 +38,6 @@ class SimpleBlog {
 				],
 			], JSON_FORCE_OBJECT | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
 		}
-
 		return json_decode(file_get_contents($this->dbPath));
 	}
 
@@ -245,7 +238,6 @@ HTML;
 					break;
 			}
 		}
-
 		return $args;
 	}
 
@@ -268,7 +260,6 @@ HTML;
 				$args[0] = $content;
 			}
 		}
-
 		return $args;
 	}
 }
